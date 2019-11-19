@@ -1,10 +1,15 @@
-## next.js
+## next.js入门到放弃
 
 #### 服务器端渲染-SSR
-1. 服务端渲染（SSR: Server Side Rendering）,html页面由服务器渲染好，客户端请求的是完整的html页面。
-2. 随着vue和react的盛行，单页应用越来越多，为了解决SEO的问题，分别推出了nuxt.js和next.js
+服务端渲染（SSR: Server Side Rendering）,用户请求服务器，服务器上直接生成 HTML 内容并返回给浏览器。服务器端渲染来，页面的内容是由 Server 端生成的。一般来说，服务器端渲染的页面交互能力有限，如果要实现复杂交互，还是要通过引入 JavaScript 文件来辅助实现。服务器端渲染这个概念，适用于任何后端语言。。
 
-#### 安装
+#### 为什么要使用SSR技术
+CSR 项目的 SEO 能力极弱，在搜索引擎中基本上不可能有好的排名。因为目前大多数搜索引擎主要识别的内容还是 HTML，对 JavaScript 文件内容的识别都还比较弱。如果一个项目的流量入口来自于搜索引擎，这个时候你使用 CSR 进行开发，就非常不合适了
+
+#### 来张图先
+![next](https://raw.githubusercontent.com/esymeptoo/next-demo/master/assets/next-detail.png)
+
+#### 安装next.js
 1. yarn add next react react-dom
 2. 在package.json-scripts添加            
 ```js
@@ -21,6 +26,7 @@
   - node_modules
   - .next
   - next.config.js
+  - server.js
   - package.json
 
 #### 路由
@@ -47,6 +53,7 @@ pages下的文件目录除了注册页面路由以外 还可以在pages下面新
 项目根目录新建server.js
 
 #### next.config.js
+设置一些webpack的配置或者next的配置
 
 
 
