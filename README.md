@@ -6,6 +6,10 @@
 #### 为什么要使用SSR技术
 CSR 项目的 SEO 能力极弱，在搜索引擎中基本上不可能有好的排名。因为目前大多数搜索引擎主要识别的内容还是 HTML，对 JavaScript 文件内容的识别都还比较弱。如果一个项目的流量入口来自于搜索引擎，这个时候你使用 CSR 进行开发，就非常不合适了
 
+SSR 的产生，主要就是为了解决上面所说的问题。在 React 中使用 SSR 技术，我们让 React 代码在服务器端先执行一次，使得用户下载的 HTML 已经包含了所有的页面展示内容，这样，页面展示的过程只需要经历一个 HTTP 请求周期，TTFP 时间得到一倍以上的缩减。
+
+同时，由于 HTML 中已经包含了网页的所有内容，所以网页的 SEO 效果也会变的非常好。之后，我们让 React 代码在客户端再次执行，为 HTML 网页中的内容添加数据及事件的绑定，页面就具备了 React 的各种交互能力。
+
 #### 来张图先
 ![next](https://raw.githubusercontent.com/esymeptoo/next-demo/master/assets/next-detail.png)
 
